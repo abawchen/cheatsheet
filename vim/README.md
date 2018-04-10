@@ -6,7 +6,7 @@
 
 ### [Just VIM](https://www.youtube.com/watch?v=XA2WjJbmmoM)
 
-  I take the following config:
+  I take the following config from [changemewtf/no_plugins](https://github.com/changemewtf/no_plugins)
 
   - Finding files
   - Tag jumping
