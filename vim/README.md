@@ -6,10 +6,9 @@
 
 ### [Just VIM](https://www.youtube.com/watch?v=XA2WjJbmmoM)
 
-    I take the following config:
+  I take the following config:
 
-    - Finding files
-    - Tag jumping
-    - Autocomplete
-    - File browsing
-
+  - Finding files
+  - Tag jumping
+  - Autocomplete
+  - File browsing
