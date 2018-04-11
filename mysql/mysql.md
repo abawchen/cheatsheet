@@ -3,12 +3,12 @@
 - **Setup the login credentials**
 
     ```
-$mysql_config_editor set \
-    --login-path=name \
-    --host=localhost \
-    --user=localuser \
-    --password
-```
+    $mysql_config_editor set \
+        --login-path=name \
+        --host=localhost \
+        --user=localuser \
+        --password
+    ```
 
 - **Check the config**
 
