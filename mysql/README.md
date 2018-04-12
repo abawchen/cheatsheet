@@ -1,4 +1,4 @@
-### Login setup
+## Login setup
 
 - **Setup the login credentials**
 
@@ -18,9 +18,9 @@
 
     `$mycli --login-path=name`
 
-### [No line wrap for better view](https://github.com/dbcli/mycli/issues/264#issuecomment-217784090)
+## No line wrap for better view
 
-Put pager confing as follows to `~/.my.cnf`
+Put pager confing as follows to `~/.my.cnf` (https://github.com/dbcli/mycli/issues/264#issuecomment-217784090)
 
 ```
 [client]
