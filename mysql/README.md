@@ -1,4 +1,4 @@
-### Login Setup
+### Login setup
 
 - **Setup the login credentials**
 
@@ -17,3 +17,12 @@
 - **Use mycli to login with login-path**
 
     `$mycli --login-path=name`
+
+### [No line wrap for better view](https://github.com/dbcli/mycli/issues/264#issuecomment-217784090)
+
+Put pager confing as follows to `~/.my.cnf`
+
+```
+[client]
+pager =  'less -SXRF'
+```
