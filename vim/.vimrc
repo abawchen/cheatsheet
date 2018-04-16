@@ -102,8 +102,6 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " Highlight tailing empty space
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 " http://softsmith.blogspot.tw/2013/03/vim-tab.html
-highlight Whitespace cterm=underline gui=underline ctermbg=NONE guibg=NONE ctermfg=yellow guifg=yellow
-autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=NONE guibg=NONE ctermfg=yellow guifg=yellow
-" match Whitespace /  \+/
+highlight Whitespace ctermbg=red guibg=red
 match Whitespace /\s\+$/
 
