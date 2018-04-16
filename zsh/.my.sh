@@ -12,3 +12,11 @@ source ~/.nvm/nvm.sh
 if [ $ITERM_SESSION_ID ]; then
   export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
 fi
+
+
+# Alias function for docker
+function docker-ssh() { docker exec -it "$1" bash; }
+
+# https://stackoverflow.com/a/20686101/9041712
+function docker-ip() { docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$1"; }
+
