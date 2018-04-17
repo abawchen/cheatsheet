@@ -1,6 +1,6 @@
 ## Login setup
 
-- **Setup the login credentials**
+- Setup the login credentials
 
     ```
     $ mysql_config_editor set \
@@ -10,11 +10,11 @@
         --password
     ```
 
-- **Check the config**
+- Check the config
 
     `$ mysql_config_editor print --all`
 
-- **Use mycli to login with login-path**
+- Use mycli to login with login-path
 
     `$ mycli --login-path=name`
 
@@ -29,24 +29,24 @@ pager = 'less -SXRF'
 
 ## Operations
 
-[Open port 3306 on Ubuntu](https://askubuntu.com/a/272435)
+- [Open port 3306 on Ubuntu](https://askubuntu.com/a/272435)
 
-Removing the line `bind-address 127.0.0.1` from `/etc/mysql/my.cnf` solved the issue.
+    Removing the line `bind-address 127.0.0.1` from `/etc/mysql/my.cnf` solved the issue.
 
 
 ## Commands
 
-[Create Database](https://dba.stackexchange.com/a/76789)
+- [Create Database](https://dba.stackexchange.com/a/76789)
 
-```
-mysql> CREATE DATABASE mydatabase CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
+    ```
+    mysql> CREATE DATABASE mydatabase CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+    ```
 
-[Create User](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
+- [Create User](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
 
-```
-mysql> CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
-mysql> GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
-mysql> FLUSH PRIVILEGES;
-```
+    ```
+    mysql> CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+    mysql> GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    mysql> FLUSH PRIVILEGES;
+    ```
 
