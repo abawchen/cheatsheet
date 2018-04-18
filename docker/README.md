@@ -31,7 +31,7 @@
        stable"
     $ sudo apt-get update
     $ sudo apt-get install docker-ce
-```
+    ```
 
 - [Install Docker-Compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04)
 
