@@ -12,7 +12,7 @@
 
     `$ docker stop $(docker ps -a -q)`
     
-- Remove all images
+- Remove all containers
 
     `$ docker rm $(docker ps -a -q)`
 
