@@ -2,15 +2,19 @@
 
 - SSH to container
 
-    ```
-    $ docker exec -it container_name_or_id bash
-    ```
+    `$ docker exec -it container_name_or_id bash`
 
 - Check container ip
 
-    ```
-    $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id
-    ```
+    `$ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id`
+
+- Stop all containers
+
+    `$ docker stop $(docker ps -a -q)`
+    
+- Remove all images
+
+    `$ docker rm $(docker ps -a -q)`
 
 ## Unbuntu
 
