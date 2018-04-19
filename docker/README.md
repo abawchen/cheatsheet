@@ -45,3 +45,12 @@
     $ sudo chmod +x /usr/local/bin/docker-compose
     $ docker-compose --version
     ```
+    
+- [Run without sudo](https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo)
+
+    ```
+    $ sudo groupadd docker
+    $ sudo gpasswd -a $USER docker
+    # Re-login
+    $ docker run hello-world
+    ```
