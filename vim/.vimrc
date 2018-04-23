@@ -40,7 +40,14 @@ set ttimeoutlen=0
 " map <C-c> "+y
 " https://stackoverflow.com/a/9449010/9041712
 vmap <C-x> :!pbcopy<CR>  
-vmap <C-c> :w !pbcopy<CR><CR> 
+vmap <C-c> :w !pbcopy<CR><CR>
+
+" https://goo.gl/EDhgLQ
+:inoremap ( ()<Esc>i
+:inoremap " ""<Esc>i
+:inoremap ' ''<Esc>i
+:inoremap [ []<Esc>i
+:inoremap {<CR> {<CR>}<Esc>ko 
 
 
 set rtp+=~/.vim/bundle/Vundle.vim
