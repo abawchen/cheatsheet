@@ -47,8 +47,11 @@ vmap <C-c> :w !pbcopy<CR><CR>
 :inoremap " ""<Esc>i
 :inoremap ' ''<Esc>i
 :inoremap [ []<Esc>i
-:inoremap {<CR> {<CR>}<Esc>ko 
+:inoremap {<CR> {<CR>}<Esc>ko
 
+" For specific file type setting
+autocmd filetype javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd filetype make setlocal noexpandtab
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
