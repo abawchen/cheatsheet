@@ -57,7 +57,10 @@ pager = 'less -SXRF'
     # After altering, toggle FOREIGN_KEY_CHECKS on
     SET FOREIGN_KEY_CHECKS = 1;
     ```
-    
+- [Dump & Restore](https://stackoverflow.com/a/9696463/9041712)
 
-
+    ```
+    mysqldump -u -p mydatabase table1 > table1.sql
+    mysql -u -p mydatabase < table1.sql
+    ```
 
