@@ -31,7 +31,7 @@ pager = 'less -SXRF'
 
 - [Open port 3306 on Ubuntu](https://askubuntu.com/a/272435)
 
-    Removing the line `bind-address 127.0.0.1` from `/etc/mysql/my.cnf` solved the issue.
+    Removing the line `bind-address 127.0.0.1` from `/etc/mysql/my.cnf` or `/etc/mysql/mysql.conf.d/mysqld.cnf` solved the issue.
 
 
 ## Commands
