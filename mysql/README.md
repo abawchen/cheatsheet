@@ -49,4 +49,15 @@ pager = 'less -SXRF'
     mysql> GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
     mysql> FLUSH PRIVILEGES;
     ```
+    
+- [Take care 1025 when altering table](https://stackoverflow.com/a/41543786/9041712)
+
+    ```
+    SET FOREIGN_KEY_CHECKS = 0;
+    # After altering, toggle FOREIGN_KEY_CHECKS on
+    SET FOREIGN_KEY_CHECKS = 1;
+    ```
+    
+
+
 
