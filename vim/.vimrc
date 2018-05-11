@@ -10,10 +10,6 @@ set showtabline=0
 syntax on
 set wrap
 set fileformat=unix
-" set cindent
-" set nocindent
-" set autoindent
-" set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -26,21 +22,34 @@ set backspace=2
 set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
-" set matchtime=5
 set incsearch
 set hlsearch
 set whichwrap+=<,>,h,l
 set autoread
-" set cursorline
-
 set timeoutlen=1000
 set ttimeoutlen=0
+" set cindent
+" set nocindent
+" set autoindent
+" set smartindent
+" set matchtime=5
+" set cursorline
+
+" Highlight tailing empty space
+" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+" http://softsmith.blogspot.tw/2013/03/vim-tab.html
+highlight Whitespace ctermbg=red guibg=red
+match Whitespace /\s\+$/
+
+" highlight-matching-parenthesis
+" https://goo.gl/U8PFDq
+highlight MatchParen ctermbg=blue guibg=lightblue
 
 " Ctrl+c, Ctrl+p to copy paste with selection
-" map <C-c> "+y
+map <C-c> "+y
 " https://stackoverflow.com/a/9449010/9041712
-vmap <C-x> :!pbcopy<CR>  
-vmap <C-c> :w !pbcopy<CR><CR>
+" vmap <C-x> :!pbcopy<CR>  
+" vmap <C-c> :w !pbcopy<CR><CR>
 
 " https://goo.gl/EDhgLQ
 :inoremap ( ()<Esc>i
@@ -111,10 +120,3 @@ let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-
-" Highlight tailing empty space
-" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-" http://softsmith.blogspot.tw/2013/03/vim-tab.html
-highlight Whitespace ctermbg=red guibg=red
-match Whitespace /\s\+$/
-
