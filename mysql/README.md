@@ -53,14 +53,30 @@ pager = 'less -SXRF'
 - [Take care 1025 when altering table](https://stackoverflow.com/a/41543786/9041712)
 
     ```
-    SET FOREIGN_KEY_CHECKS = 0;
+    mysql> SET FOREIGN_KEY_CHECKS = 0;
     # After altering, toggle FOREIGN_KEY_CHECKS on
-    SET FOREIGN_KEY_CHECKS = 1;
+    mysql> SET FOREIGN_KEY_CHECKS = 1;
     ```
 - [Dump & Restore](https://stackoverflow.com/a/9696463/9041712)
 
     ```
-    mysqldump -u -p mydatabase table1 > table1.sql
-    mysql -u -p mydatabase < table1.sql
+    $ mysqldump -u -p mydatabase table1 > table1.sql
+    $ mysql -u -p mydatabase < table1.sql
+    ```
+    ```
+    mysql>
+    LOAD DATA LOCAL INFILE '{CSV_PATH}'
+    INTO TABLE annotation_openimage_train
+    FIELDS TERMINATED BY ','
+    OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY '\n'
+    ({COLUMN_1}, {COLUMN_2}, ...)
+
+    # https://stackoverflow.com/a/32737616/9041712
+    mysql>
+    SELECT * INTO OUTFILE '{CSV_PATH}'
+    FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY '\n'
+    FROM {TABLE}
     ```
 
