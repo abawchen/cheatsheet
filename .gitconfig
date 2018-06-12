@@ -1,32 +1,31 @@
 [user]
-	email = xxxx@gmail.com
-	name = xxxx
+    email = xxxx@gmail.com
+    name = xxxx
 [color]
-	ui = auto
+    ui = auto
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [difftool]
-	prompt = false
+    prompt = false
 [push]
-	default = current
+    default = current
 [pull]
-	default = current
+    default = current
 [grep]
     linenumber = true
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 	conflictstyle = diff3
 [pager]
-    # https://stackoverflow.com/a/48370253/9041712
-	branch = false
+    branch = false
 [alias]
-	clear = remote prune origin
-	last = log -1 HEAD
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	remove-prefix = "!f() { git branch | grep ${1} | xargs git branch -d; }; f"
-	force-remove-prefix = "!f() { git branch | grep ${1} | xargs git branch -D; }; f"
-	remove-remote-branch = push origin --delete
-	replace-text = "!f() { git grep -l ${1} | xargs sed -i '' -e 's/'${1}'/'${2}'/g'; }; f"
-	tree = log --pretty=oneline --abbrev-commit --graph
-	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
+    clear = remote prune origin
+    last = log -1 HEAD
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    remove-prefix = "!f() { git branch | grep ${1} | xargs git branch -d; }; f"
+    force-remove-prefix = "!f() { git branch | grep ${1} | xargs git branch -D; }; f"
+    remove-remote-branch = push origin --delete
+    replace-text = "!f() { git grep -l ${1} | xargs sed -i '' -e 's/'${1}'/'${2}'/g'; }; f"
+    tree = log --pretty=oneline --abbrev-commit --graph
+    change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
