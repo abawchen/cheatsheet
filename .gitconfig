@@ -16,6 +16,9 @@
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
+[pager]
+    # https://stackoverflow.com/a/48370253/9041712
+	branch = false
 [alias]
 	clear = remote prune origin
 	last = log -1 HEAD
