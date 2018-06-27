@@ -89,6 +89,8 @@ set wildmenu
 
 " THINGS TO CONSIDER:
 " - :b lets you autocomplete any open buffer
+" - :bprevious :bnext go to previous/next buffer
+" - Ctrl-^
 
 
 " TAG JUMPING:
