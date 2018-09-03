@@ -7,6 +7,9 @@ export NVM_DIR="/Users/ylchen/.nvm"
 # https://github.com/creationix/nvm#installation
 source ~/.nvm/nvm.sh
 
+# https://superuser.com/a/545486/924723
+alias ls='gls --color=auto --group-directories-first'
+
 # Set the iTerm tab title to the current directory
 # https://gist.github.com/phette23/5270658
 if [ $ITERM_SESSION_ID ]; then
@@ -19,4 +22,3 @@ function docker-ssh() { docker exec -it "$1" bash; }
 
 # https://stackoverflow.com/a/20686101/9041712
 function docker-ip() { docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$1"; }
-
