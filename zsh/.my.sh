@@ -10,6 +10,9 @@ source ~/.nvm/nvm.sh
 # https://superuser.com/a/545486/924723
 alias ls='gls --color=auto --group-directories-first'
 
+# https://goo.gl/bzRLHN
+alias imgdim='sips -g pixelHeight -g pixelWidth $1'
+
 # Set the iTerm tab title to the current directory
 # https://gist.github.com/phette23/5270658
 if [ $ITERM_SESSION_ID ]; then
