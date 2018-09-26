@@ -2,15 +2,19 @@
 
 - **[Install virtualenv](https://virtualenv.pypa.io/en/latest/installation/)**
 
-    `sudo pip install virtualenv`
+    ```bash
+    sudo pip install virtualenv
+    ```
 
 - **[Install virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)**
 
-    `sudo pip install virtualenvwrapper`
+    ```bash
+    sudo pip install virtualenvwrapper
+    ```
 
   Put following lines into your `~/.bashrc`
 
-    ```
+    ```bash
     export WORKON_HOME=$HOME/.virtualenvs
     source /usr/local/bin/virtualenvwrapper.sh
     ```
@@ -22,14 +26,15 @@
 
 - When we want to try something still under the development of a repository:
 
-    `$ pip install --editable .`
-
+    ```bash
+    pip install --editable .
+    ```
 
 ## Ubuntu
 
 - Install pyenv and virtualenv
 
-    ```
+    ```bash
     git clone https://github.com/yyuu/pyenv.git ~/.pyenv
     git clone https://github.com/yyuu/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
     echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
