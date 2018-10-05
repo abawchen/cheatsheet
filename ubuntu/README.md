@@ -48,4 +48,32 @@
   sudo vim /etc/fstab
   sudo mount -a
   ```
--
+- Enable network in recovery mode
+
+  - https://askubuntu.com/questions/977450/eth0-error-while-getting-interface-flags-no-such-device
+  - https://serverfault.com/questions/21475/starting-network-connection-from-ubuntu-recovery
+  - https://askubuntu.com/questions/930871/connect-to-internet-in-recovery-mode
+
+  ```bash
+  ifconfig -a
+  ```
+  
+  ```bash
+  ifconfig xxxx up
+  ```
+  
+  ```bash
+  dhclient xxxx
+  ```
+  
+  ```bash
+  ping 8.8.8.8
+  ```
+  
+  ```bash
+  echo "namserver 8.8.8.8" | sudo tee /etc/resolv.conf
+  ```
+  
+  ```bash
+  ping www.google.com
+  ```
