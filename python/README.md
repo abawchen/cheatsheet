@@ -30,7 +30,7 @@
     pip install --editable .
     ```
 
-## Ubuntu
+## pyenv on ubuntu
 
 - Install pyenv and virtualenv
 
@@ -43,3 +43,4 @@
     echo 'pyenv virtualenvwrapper' >> ~/.bashrc
     exec $SHELL
     ```
+- https://www.cnblogs.com/itflycat/p/4461897.html
