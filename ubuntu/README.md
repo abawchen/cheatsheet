@@ -1,7 +1,7 @@
 - Install Intel wifi driver
 
   ```bash
-  sudo lshw -C network
+  $ sudo lshw -C network
   ```
   
   ```
@@ -39,14 +39,14 @@
 - [NFSv4Howto](https://help.ubuntu.com/community/NFSv4Howto)
   
   ```bash
-  sudo apt-get install nfs-common
+  $ sudo apt-get install nfs-common
   ```
 
 - Mount on boot
 
   ```bash
-  sudo vim /etc/fstab
-  sudo mount -a
+  $ sudo vim /etc/fstab
+  $ sudo mount -a
   ```
 - Enable network in recovery mode
 
@@ -55,25 +55,21 @@
   - https://askubuntu.com/questions/930871/connect-to-internet-in-recovery-mode
 
   ```bash
-  ifconfig -a
+  $ ifconfig -a
+  $ ifconfig xxxx up
+  $ dhclient xxxx
+  $ ping 8.8.8.8
+  $ echo "namserver 8.8.8.8" | sudo tee /etc/resolv.conf
+  $ ping www.google.com
+  ```
+- Check NVIDIA spec.
+
+  ```bash
+  $ sudo update-pciids
+  $ sudo lspci | grep VGA
   ```
   
-  ```bash
-  ifconfig xxxx up
   ```
-  
-  ```bash
-  dhclient xxxx
-  ```
-  
-  ```bash
-  ping 8.8.8.8
-  ```
-  
-  ```bash
-  echo "namserver 8.8.8.8" | sudo tee /etc/resolv.conf
-  ```
-  
-  ```bash
-  ping www.google.com
+  02:00.0 VGA compatible controller: NVIDIA Corporation GP104 [GeForce GTX 1070 Ti] (rev a1)
+  08:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 30)
   ```
