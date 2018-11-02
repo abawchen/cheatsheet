@@ -26,3 +26,11 @@
 	$ sudo apt-get update
 	$ sudo apt install nvidia-modprobe nvidia-docker
 	```
+
+- [libcudart.so.9.1, needed by /usr/local/lib/libopencv_core.so, not found (try using -rpath or -rpath-link)](https://stackoverflow.com/a/40199490/9041712)
+
+    ```bash
+    # Check dependency
+    $ ldd /usr/local/lib/libopencv_core.so
+    ```
+
