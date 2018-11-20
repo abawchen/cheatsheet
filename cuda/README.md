@@ -44,6 +44,13 @@
 - [Install specified version](https://askubuntu.com/questions/530043/removing-nvidia-cuda-toolkit-and-installing-new-one)
 
 	```bash
+	#Get from https://developer.nvidia.com/cuda-91-download-archive
+	$ sudo dpkg -i cuda-repo-ubuntu1604-9-1-local_9.1.85-1_amd64.deb`
+	$ sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub`
+	$ sudo apt-get update
+	```
+
+	```bash
 	# the version number must be included, or it will still install the previous one.
 	$ sudo apt-get install cuda-x.x
 	```
