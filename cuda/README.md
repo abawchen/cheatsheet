@@ -41,3 +41,9 @@
 	$ sudo apt-get autoremove
 	```
 
+- [Install specified version](https://askubuntu.com/questions/530043/removing-nvidia-cuda-toolkit-and-installing-new-one)
+
+	```bash
+	# the version number must be included, or it will still install the previous one.
+	$ sudo apt-get install cuda-x.x
+	```
