@@ -34,3 +34,10 @@
     $ ldd /usr/local/lib/libopencv_core.so
     ```
 
+- [Purging NVIDIA packages](https://unix.stackexchange.com/questions/440840/how-to-unload-kernel-module-nvidia-drm)
+
+	```bash
+	$ sudo apt-get purge nvidia* 
+	$ sudo apt-get autoremove
+	```
+
