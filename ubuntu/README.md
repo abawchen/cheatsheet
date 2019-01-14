@@ -72,6 +72,15 @@
   GCC version:  gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10)
   ```
 
+  ```
+  # Runtime version
+  root@93c47c11a5d0:/# nvcc -V
+  nvcc: NVIDIA (R) Cuda compiler driver
+  Copyright (c) 2005-2016 NVIDIA Corporation
+  Built on Tue_Jan_10_13:22:03_CST_2017
+  Cuda compilation tools, release 8.0, V8.0.61
+  ```
+
   ```bash
   $ sudo update-pciids
   $ sudo lspci | grep VGA
