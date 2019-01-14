@@ -63,6 +63,14 @@
   $ ping www.google.com
   ```
 - Check NVIDIA spec.
+  
+  ```bash
+  # Driver version
+  # https://stackoverflow.com/a/13127714/9041712
+  $ cat /proc/driver/nvidia/version
+  NVRM version: NVIDIA UNIX x86_64 Kernel Module  410.72  Wed Oct 17 20:08:45 CDT 2018
+  GCC version:  gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10)
+  ```
 
   ```bash
   $ sudo update-pciids
