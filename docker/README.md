@@ -7,11 +7,19 @@
   # re-login
   $ docker run hello-world
   
+  # docker run
+  $ docker run -it \
+      -p hostPort:containerPort \
+      -v hostPath:containerPath \
+      --name containerName \
+      imageName \
+      cmd
+  
   # ssh into container
   $ docker exec -it container_name_or_id bash
 
   # check container ip
-  $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id`
+  $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' containerName|containerID`
 
   # stop all containers
   $ docker stop $(docker ps -a -q)
@@ -48,13 +56,4 @@
   $ sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
   $ sudo chmod +x /usr/local/bin/docker-compose
   $ docker-compose --version
-  ```
-    
-- [Run without sudo](https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo)
-
-  ```bash
-  $ sudo groupadd docker
-  $ sudo gpasswd -a $USER docker
-  # Re-login
-  $ docker run hello-world
   ```
