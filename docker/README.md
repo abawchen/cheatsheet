@@ -49,6 +49,20 @@
   $ sudo apt-get install docker-ce
   ```
 
+- [Install Nvidia-Docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
+
+  ```bash
+  $ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
+    sudo apt-key add -
+    distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+  $ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
+    sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+  $ sudo apt-get update
+  $ sudo apt-get install nvidia-docker2
+  $ sudo pkill -SIGHUP dockerd
+  ```
+
+
 - [Install Docker-Compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04)
 
   ```bash
