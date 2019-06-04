@@ -7,9 +7,10 @@
   ```
 - Install
 
- ```bash
- $ pip install awscli
- ```
+  ```bash
+  $ pip install awscli
+  ```
+
 - [Enable autocomplete](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html)
 
   ```bash
