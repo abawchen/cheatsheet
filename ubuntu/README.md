@@ -1,4 +1,4 @@
-- Install Intel wifi driver
+### Install Intel wifi driver
 
   ```bash
   $ sudo lshw -C network
@@ -36,19 +36,19 @@
    ```
 
 
-- [NFSv4Howto](https://help.ubuntu.com/community/NFSv4Howto)
+### [NFSv4Howto](https://help.ubuntu.com/community/NFSv4Howto)
   
   ```bash
   $ sudo apt-get install nfs-common
   ```
 
-- Mount on boot
+### Mount on boot
 
   ```bash
   $ sudo vim /etc/fstab
   $ sudo mount -a
   ```
-- Enable network in recovery mode
+### Enable network in recovery mode
 
   - https://askubuntu.com/questions/977450/eth0-error-while-getting-interface-flags-no-such-device
   - https://serverfault.com/questions/21475/starting-network-connection-from-ubuntu-recovery
@@ -62,7 +62,7 @@
   $ echo "namserver 8.8.8.8" | sudo tee /etc/resolv.conf
   $ ping www.google.com
   ```
-- Check NVIDIA spec.
+### Check NVIDIA spec.
   
   ```bash
   # Driver version
@@ -91,7 +91,7 @@
   08:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 30)
   ```
 
-- Install nvidia-docker2 on ubuntu 18.04 (https://github.com/NVIDIA/nvidia-docker/issues/887#issuecomment-447829585)
+### Install nvidia-docker2 on ubuntu 18.04 (https://github.com/NVIDIA/nvidia-docker/issues/887#issuecomment-447829585)
 
   ```bash
   $ sudo apt-get remove docker docker-engine docker.io
@@ -114,3 +114,13 @@
   $ sudo apt-get install docker-ce
   $ sudo apt-get install nvidia-docker2
   ```
+
+### Ubuntu 18.04 stuck on splash screen (https://www.maketecheasier.com/boot-recovery-mode-ubuntu/)
+
+- Press ESC to enter `Ubuntu’s GRUB boot menu`
+- Add/Remove nomodeset
+- Refs:
+  - https://askubuntu.com/questions/38780/how-do-i-set-nomodeset-after-ive-already-installed-ubuntu/38782
+  - https://itsfoss.com/fix-ubuntu-freezing/
+  - https://www.maketecheasier.com/boot-recovery-mode-ubuntu/
+
