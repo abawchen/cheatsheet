@@ -117,8 +117,12 @@
 
 ### Ubuntu 18.04 stuck on splash screen (https://www.maketecheasier.com/boot-recovery-mode-ubuntu/)
 
-- Press ESC to enter `Ubuntu’s GRUB boot menu`
+- Press `ESC` & `e` to enter `Ubuntu’s GRUB boot menu`
 - Add/Remove nomodeset
+  ```
+  # or
+  sudo vim /etc/default/grub
+  ```
 - Refs:
   - https://askubuntu.com/questions/38780/how-do-i-set-nomodeset-after-ive-already-installed-ubuntu/38782
   - https://itsfoss.com/fix-ubuntu-freezing/
