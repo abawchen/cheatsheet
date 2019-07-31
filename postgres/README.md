@@ -14,6 +14,7 @@
 	```bash
 	$ pip install pgcli
 	$ pgcli postgres -h localhost -u postgres
+	# with above password
 	
     Server: PostgreSQL 11.4
     Version: 2.1.1
