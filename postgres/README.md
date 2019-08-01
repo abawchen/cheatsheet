@@ -1,4 +1,6 @@
-### Postgres
+## Postgres
+
+### Installation
 
 - Run postgres in docker
 
@@ -23,3 +25,13 @@
     Home: http://pgcli.com
     postgres@localhost:postgres>
     ```
+
+### Commands
+
+```sql
+# Add NOT NULL constraint
+ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
+
+# Remove NOT NULL constraint
+ALTER TABLE table_name ALTER COLUMN column_name DROP NOT NULL;
+```
