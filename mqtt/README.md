@@ -1,17 +1,18 @@
 ## Mosquitto on Ubuntu 18.04
 
 - Installation
+  
   ```bash
   $ sudo apt update
   $ sudo apt install mosquitto mosquitto-clients
   ```
 
 - Quick test
+  
   ```bash
   # subscribe in one console
   $ mosquitto_sub -h localhost -t test
-  
-  ```bash
+
   # publish in another console
   $ mosquitto_pub -h localhost -t test -m "hello world"
   ```
@@ -35,7 +36,12 @@
   keyfile /etc/mosquitto/certs/hostname.key
   ```
   
-  ```
+  ```bash
   # restart mqtt server
   $ sudo systemctl restart mosquitto
+  ```
+  
+  ```bash
+  $ mosquitto_sub --cafile {cafile} -h 127.0.0.1 -p 8883 -t "test" 
+  $ mosquitto_pub --cafile {cafile} -h 127.0.0.1 -p 8883 -t "test" -m "hello world"
   ```
