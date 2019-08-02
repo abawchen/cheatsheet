@@ -72,3 +72,4 @@
 
 - https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-18-04
 - https://primalcortex.wordpress.com/2016/11/08/mqtt-mosquitto-broker-client-authentication-and-client-certificates/
+- https://blog.csdn.net/xiaoreqing/article/details/77571881
