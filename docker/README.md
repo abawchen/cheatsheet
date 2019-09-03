@@ -48,7 +48,15 @@
   $ sudo apt-get update
   $ sudo apt-get install docker-ce
   ```
+- [Install Docker-Compose](https://tinyurl.com/y4ll2x8d)
 
+  ```bash
+  $ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  $ sudo chmod +x /usr/local/bin/docker-compose
+  $ docker-compose --version
+  # docker-compose version 1.23.1, build b02f1306
+  ```
+  
 - [Install Nvidia-Docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
 
   ```bash
