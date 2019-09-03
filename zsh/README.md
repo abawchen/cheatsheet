@@ -14,6 +14,12 @@
 
   # Install oh-my-zsh
   $ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+  
+  # Change default bash to zsh
+  $ chsh -s /bin/zsh
+  
+  # On EC2: https://tinyurl.com/y2pozozm
+  $ sudo vim /etc/passwd
 
   $ sudo apt-get install powerline
   $ sudo apt-get install fonts-powerline
