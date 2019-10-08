@@ -62,4 +62,7 @@
   # docker
   $ docker exec -it {container_name} gitlab-backup restore
   
+  # 12.1 and earlier
+  $ gitlab-rake gitlab:backup:restore
+  $ gitlab-rake gitlab:backup:restore BACKUP={timestamp}
   ```
