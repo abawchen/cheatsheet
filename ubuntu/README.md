@@ -1,3 +1,23 @@
+### Wrap Python script to *.deb
+
+  ```bash
+  
+  ```
+
+  ```bash
+  # Install
+  $ sudo dpkg -i foo.deb
+  
+  # Check installed
+  $ sudo dpkg -L foo.deb
+  
+  # Remove install
+  $ sudo dpkg -r foo
+
+  # Add missing dependencies when using dpkg(https://github.com/jordansissel/fpm/issues/1275#issuecomment-311401078)
+  $ sudo apt-get install $(dpkg-deb -f foo.deb Depends | tr , ' ')
+  ```
+
 ### Install Intel wifi driver
 
   ```bash
@@ -91,7 +111,7 @@
   08:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 30)
   ```
 
-### Install nvidia-docker2 on ubuntu 18.04 (https://github.com/NVIDIA/nvidia-docker/issues/887#issuecomment-447829585)
+### [Install nvidia-docker2 on ubuntu 18.04](https://github.com/NVIDIA/nvidia-docker/issues/887#issuecomment-447829585)
 
   ```bash
   $ sudo apt-get remove docker docker-engine docker.io
@@ -115,7 +135,7 @@
   $ sudo apt-get install nvidia-docker2
   ```
 
-### Ubuntu 18.04 stuck on splash screen (https://www.maketecheasier.com/boot-recovery-mode-ubuntu/)
+### [Ubuntu 18.04 stuck on splash screen](https://www.maketecheasier.com/boot-recovery-mode-ubuntu/)
 
 - Press `ESC` & `e` to enter `Ubuntu’s GRUB boot menu`
 - Add/Remove nomodeset
