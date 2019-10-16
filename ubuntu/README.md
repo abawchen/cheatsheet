@@ -14,8 +14,12 @@
   # Remove install
   $ sudo dpkg -r foo
 
-  # Add missing dependencies when using dpkg(https://github.com/jordansissel/fpm/issues/1275#issuecomment-311401078)
+  # Add missing dependencies when using dpkg
+  # (https://github.com/jordansissel/fpm/issues/1275#issuecomment-311401078)
   $ sudo apt-get install $(dpkg-deb -f foo.deb Depends | tr , ' ')
+
+  # or https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpkg-i-or-by-apt
+  $ sudo apt-get install -f
   ```
 
 ### Install Intel wifi driver
