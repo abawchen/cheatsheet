@@ -1,8 +1,11 @@
-### Wrap Python script to *.deb
+### [Check Ubuntu version](https://linuxize.com/post/how-to-check-your-ubuntu-version/#targetText=Open%20your%20terminal%20either%20by,to%20display%20the%20Ubuntu%20version.&targetText=Your%20Ubuntu%20version%20will%20be,am%20using%20Ubuntu%2018.04%20LTS.)
 
   ```bash
-  
+  $ lsb_release -a
   ```
+  
+
+### Wrap Python script to *.deb
 
   ```bash
   # Install
