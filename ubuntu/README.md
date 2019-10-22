@@ -3,7 +3,41 @@
   ```bash
   $ lsb_release -a
   ```
+
+### User/Group management
+
+- [Find group id by name](https://askubuntu.com/a/639997/824819)
   
+  ```bash
+  # Replace sudo with target group name
+  $ getent group sudo | awk -F: '{printf "Group %s with GID=%d\n", $1, $3}'\n
+  $ cut -d: -f3 < <(getent group sudo)
+  ```
+
+- List all users
+
+  ```bash
+  $ cat /etc/passwd
+  ```
+
+- List current user's groups
+
+  ```bash
+  $ groups
+  ```
+
+- Add a new group
+
+  ```bash
+  $ sudo groupadd mynewgroup
+  ```
+
+- Add user to an existing group
+  
+  ```bash
+  # Add user geek to sudo group
+  $ usermod -a -G sudo geek
+  ```
 
 ### Wrap Python script to *.deb
 
