@@ -22,7 +22,8 @@
   
   # Mount
   $ sudo apt-get install cifs-utils
-  $ sudo mount -t cifs -v -o username=username,password=password //hostname/folder /mnt/share_folder
+  $ sudo mount -t cifs -v -o username=username,password=password,gid=1019,forcegid,file_mode=0775,dir_mode=0775 //hostname/folder /mnt/share_folder
+  # gid=1019,forcegid,file_mode=0775,dir_mode=0775 => r/w for specific group
   ```
 
 - Unmount
