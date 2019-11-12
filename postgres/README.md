@@ -29,9 +29,14 @@
 ### Commands
 
 ```sql
+# Create database
+=# CREATE DATABASE test
+# Switch to database
+=# \c test
+
 # Add NOT NULL constraint
-ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
+=# ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
 
 # Remove NOT NULL constraint
-ALTER TABLE table_name ALTER COLUMN column_name DROP NOT NULL;
+=# ALTER TABLE table_name ALTER COLUMN column_name DROP NOT NULL;
 ```
