@@ -26,17 +26,38 @@
     postgres@localhost:postgres>
     ```
 
+
+### .pgpass
+
+`~/.pgbass`
+
+```
+server:port:database:username:password
+```
+
 ### Commands
+
 
 ```sql
 # Create database
-=# CREATE DATABASE test
+> CREATE DATABASE test
 # Switch to database
-=# \c test
+\c test
+```
 
+```sql
+# Create user
+> create user myuser with encrypted password 'mypass';
+> grant all privileges on database mydb to myuser
+> \c mydb
+# https://stackoverflow.com/a/41418516/9041712
+> GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO jerry;
+```
+
+```
 # Add NOT NULL constraint
-=# ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
+> ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
 
 # Remove NOT NULL constraint
-=# ALTER TABLE table_name ALTER COLUMN column_name DROP NOT NULL;
+> ALTER TABLE table_name ALTER COLUMN column_name DROP NOT NULL;
 ```
