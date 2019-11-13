@@ -51,7 +51,7 @@ server:port:database:username:password
 > grant all privileges on database mydb to myuser
 > \c mydb
 # https://stackoverflow.com/a/41418516/9041712
-> GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO jerry;
+> GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO myuser;
 ```
 
 ```
