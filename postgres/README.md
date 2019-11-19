@@ -56,7 +56,7 @@ server:port:database:username:password
 > GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO www;
 ```
 
-```
+```sql
 # Add NOT NULL constraint
 > ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
 
