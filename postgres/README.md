@@ -47,11 +47,13 @@ server:port:database:username:password
 
 ```sql
 # Create user
-> create user myuser with encrypted password 'mypass';
-> grant all privileges on database mydb to myuser
+> CREATE USER myuser WITH ENCRYPTED PASSWORD 'mypass';
+> GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser
 > \c mydb
 # https://stackoverflow.com/a/41418516/9041712
 > GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO myuser;
+# https://stackoverflow.com/a/9325195/9041712
+> GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO www;
 ```
 
 ```
