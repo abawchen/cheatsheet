@@ -7,12 +7,13 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=b
 set showtabline=0
-set wrap
 set fileformat=unix
+set autoindent
+set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+" set expandtab
 set showmatch
 set scrolloff=5
 set laststatus=2
@@ -22,31 +23,14 @@ set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
 set incsearch
-set hlsearch
 set whichwrap+=<,>,h,l
 set autoread
+" set cursorline
+set ruler
+set nohlsearch
+set hlsearch
 set timeoutlen=1000
 set ttimeoutlen=0
-syntax on
-" set cindent
-" set nocindent
-" set autoindent
-" set smartindent
-" set matchtime=5
-" set cursorline
-
-" https://stackoverflow.com/a/7103261/9041712
-hi Search cterm=NONE ctermfg=white ctermbg=blue
-
-" Highlight tailing empty space
-" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-" http://softsmith.blogspot.tw/2013/03/vim-tab.html
-highlight Whitespace ctermbg=red guibg=red
-match Whitespace /\s\+$/
-
-" highlight-matching-parenthesis
-" https://goo.gl/U8PFDq
-highlight MatchParen ctermfg=white ctermbg=grey guibg=lightblue
 
 " Ctrl+c, Ctrl+p to copy paste with selection
 map <C-c> "+y
@@ -59,15 +43,18 @@ map <C-c> "+y
 :inoremap [ []<Esc>i
 :inoremap {<CR> {<CR>}<Esc>ko
 
-" For specific file type setting
-autocmd filetype javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-autocmd filetype make setlocal noexpandtab
+" Language specific
+autocmd filetype css,html,javascript,json,yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd filetype python,php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+" autocmd filetype make setlocal noexpandtab
 
 " https://github.com/changemewtf/no_plugins
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
-set path+=**
+" set path+=**
 set wildignore+=**/node_modules/**
+set wildignore+=**/dist/**
+set wildignore+=*.pyc,*.swp,*/.git/*
 
 " Display all matching files when we tab complete
 set wildmenu
@@ -78,15 +65,18 @@ set wildmenu
 
 " THINGS TO CONSIDER:
 " - :b lets you autocomplete any open buffer
-" - :bprevious :bnext go to previous/next buffer
-" - Ctrl-^
-
+" - Use ^o or :bprevious to back to previous buffer
+" - :bnext to next buffer
 
 " TAG JUMPING:
 " Create the `tags` file (may need to install ctags first)
 " https://gist.github.com/nazgob/1570678
 command! MakeTags !ctags -R .
-
+" NOW WE CAN:
+" - :MakeTags to create tags file
+" - Use ^] to jump to tag under cursor
+" - Use g^] for ambiguous tags
+" - Use ^t to jump back up the tag stack
 
 " AUTOCOMPLETE:
 " The good stuff is documented in |ins-completion|
@@ -108,12 +98,33 @@ let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+" NOW WE CAN:
+" - :edit a folder to open a file browser
+" - <CR>/v/t to open in an h-split/v-split/tab
+" - check |netrw-browse-maps| for more mappings
 
-" Vundle plugins
-filetype off
+" https://stackoverflow.com/a/1676672/9041712
+autocmd filetype c,cpp,java,scala,javascript let b:comment_leader = '// '
+autocmd filetype sh,ruby,python   let b:comment_leader = '# '
+autocmd filetype conf,fstab       let b:comment_leader = '# '
+autocmd filetype tex              let b:comment_leader = '% '
+autocmd filetype mail             let b:comment_leader = '> '
+autocmd filetype vim              let b:comment_leader = '" '
+noremap <silent> <leader>c :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> <leader>u :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
+" Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" Plugin 'scrooloose/njmklp-090'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+" Plugin 'dracula/vim'
+" Plugin 'aradunovic/perun.vim'
 call vundle#end()
-filetype plugin indent on
+syntax on
 colorscheme onehalfdark
+
+highlight MatchParen ctermbg=yellow guibg=yellow ctermfg=red guifg=red
+highlight Whitespace ctermbg=red guibg=red
+match Whitespace /\s\+$/
