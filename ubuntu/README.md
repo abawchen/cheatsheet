@@ -3,6 +3,13 @@
   ```bash
   $ lsb_release -a
   ```
+### Disk space
+
+- Get size of a directory
+
+  ```bash
+  $ du -sh directory_name
+  ```
 
 ### User/Group management
 
