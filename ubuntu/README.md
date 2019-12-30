@@ -14,7 +14,7 @@
   ```
 ### Disk space
 
-- Get size of a directory
+- [Get size of a directory](https://dotblogs.com.tw/newmonkey48/2012/12/07/85471)
 
   ```bash
   $ du -sh directory_name
