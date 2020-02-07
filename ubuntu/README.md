@@ -1,4 +1,4 @@
-### Mac ssh to Ubuntu with X11 in iterm2
+## Mac ssh to Ubuntu with X11 in iterm2
 
 - Install [XQuartz](https://uisapp2.iu.edu/confluence-prd/pages/viewpage.action?pageId=280461906)
 
@@ -7,12 +7,12 @@
   $ ssh -X {hostname}
   ```
 
-### [Check Ubuntu version](https://linuxize.com/post/how-to-check-your-ubuntu-version/#targetText=Open%20your%20terminal%20either%20by,to%20display%20the%20Ubuntu%20version.&targetText=Your%20Ubuntu%20version%20will%20be,am%20using%20Ubuntu%2018.04%20LTS.)
+## [Check Ubuntu version](https://linuxize.com/post/how-to-check-your-ubuntu-version/#targetText=Open%20your%20terminal%20either%20by,to%20display%20the%20Ubuntu%20version.&targetText=Your%20Ubuntu%20version%20will%20be,am%20using%20Ubuntu%2018.04%20LTS.)
 
   ```bash
   $ lsb_release -a
   ```
-### Disk space
+## Disk space
 
 - [Get size of a directory](https://dotblogs.com.tw/newmonkey48/2012/12/07/85471)
 
@@ -20,7 +20,7 @@
   $ du -sh directory_name
   ```
 
-### User/Group management
+## User/Group management
 
 - [Find group id by name](https://askubuntu.com/a/639997/824819)
   
@@ -55,7 +55,7 @@
   $ usermod -a -G sudo geek
   ```
 
-### Wrap Python script to *.deb
+## Wrap Python script to *.deb
 
   ```bash
   # Install
@@ -75,7 +75,7 @@
   $ sudo apt-get install -f
   ```
 
-### Install Intel wifi driver
+## Install Intel wifi driver
 
   ```bash
   $ sudo lshw -C network
@@ -113,19 +113,19 @@
    ```
 
 
-### [NFSv4Howto](https://help.ubuntu.com/community/NFSv4Howto)
+## [NFSv4Howto](https://help.ubuntu.com/community/NFSv4Howto)
   
   ```bash
   $ sudo apt-get install nfs-common
   ```
 
-### Mount on boot
+## Mount on boot
 
   ```bash
   $ sudo vim /etc/fstab
   $ sudo mount -a
   ```
-### Enable network in recovery mode
+## Enable network in recovery mode
 
   - https://askubuntu.com/questions/977450/eth0-error-while-getting-interface-flags-no-such-device
   - https://serverfault.com/questions/21475/starting-network-connection-from-ubuntu-recovery
@@ -139,7 +139,7 @@
   $ echo "namserver 8.8.8.8" | sudo tee /etc/resolv.conf
   $ ping www.google.com
   ```
-### Check NVIDIA spec.
+## Check NVIDIA spec.
   
   ```bash
   # Driver version
@@ -168,7 +168,7 @@
   08:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 30)
   ```
 
-### [Install nvidia-docker2 on ubuntu 18.04](https://github.com/NVIDIA/nvidia-docker/issues/887#issuecomment-447829585)
+## [Install nvidia-docker2 on ubuntu 18.04](https://github.com/NVIDIA/nvidia-docker/issues/887#issuecomment-447829585)
 
   ```bash
   $ sudo apt-get remove docker docker-engine docker.io
@@ -192,7 +192,7 @@
   $ sudo apt-get install nvidia-docker2
   ```
 
-### [Ubuntu 18.04 stuck on splash screen](https://www.maketecheasier.com/boot-recovery-mode-ubuntu/)
+## [Ubuntu 18.04 stuck on splash screen](https://www.maketecheasier.com/boot-recovery-mode-ubuntu/)
 
 - Press `ESC` & `e` to enter `Ubuntu’s GRUB boot menu`
 - Add/Remove nomodeset
