@@ -37,6 +37,10 @@ server:port:database:username:password
 
 ### Commands
 
+```sql
+# config
+> SHOW data_directory;
+```
 
 ```sql
 # List databases
