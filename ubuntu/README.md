@@ -205,3 +205,12 @@
   - https://itsfoss.com/fix-ubuntu-freezing/
   - https://www.maketecheasier.com/boot-recovery-mode-ubuntu/
 
+## [Firewall]
+
+```bash
+$ ufw app list
+
+$ ufw allow 'OpenSSH'
+
+$ ufw enable
+```
