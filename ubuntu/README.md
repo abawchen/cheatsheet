@@ -205,12 +205,23 @@
   - https://itsfoss.com/fix-ubuntu-freezing/
   - https://www.maketecheasier.com/boot-recovery-mode-ubuntu/
 
-## [Firewall]
+## [Firewall](https://www.peterdavehello.org/2016/01/ubuntu-based-gnulinux-firewall-ufw-essential-config/)
 
 ```bash
 $ ufw app list
-
 $ ufw allow 'OpenSSH'
-
 $ ufw enable
+```
+
+## [Conda for multiple users](https://medium.com/@pjptech/installing-anaconda-for-multiple-users-650b2a6666c6)
+
+```bash
+$ sudo su
+$ adduser anaconda 
+# with password anaconda
+$ cd ~
+$ wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+$ chmod +x ./Anaconda3-2019.10-Linux-x86_64.sh
+$ chown -R anaconda:anaconda /opt/anaconda 
+$ chmod -R go-w /opt/anaconda
 ```
