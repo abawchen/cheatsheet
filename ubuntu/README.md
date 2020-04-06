@@ -225,3 +225,10 @@ $ chmod +x ./Anaconda3-2019.10-Linux-x86_64.sh
 $ chown -R anaconda:anaconda /opt/anaconda 
 $ chmod -R go-w /opt/anaconda
 ```
+
+## Some useful scripts
+
+- Rename file by replacing string
+  ```bash
+  $ find . -name "*.fcs" -exec rename -v 's/pattern/value/' {} \;
+  ```
