@@ -4,12 +4,23 @@
 
 - Run postgres in docker
 
-	```bash
-	$ docker pull postgres
-	# default user: postgres
-	# default database: postgres
-	$ docker run --rm --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
-	```
+  ```bash
+  $ docker pull postgres
+  # default user: postgres
+  # default database: postgres
+  $ docker run --rm --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
+  ```
+
+- [On MacOs](https://www.robinwieruch.de/postgres-sql-macos-setup)
+
+  ```bash
+  $ brew update
+  $ brew install postgresql
+  $ initdb /usr/local/var/postgres
+  $ pg_ctl -D /usr/local/var/postgres start
+  $ pg_ctl -D /usr/local/var/postgres stop
+  $ psql -d postgres
+  ```
 
 - Connect from host
 
@@ -29,7 +40,7 @@
 
 ### .pgpass
 
-`~/.pgbass`
+`~/.pgpass`
 
 ```
 server:port:database:username:password
